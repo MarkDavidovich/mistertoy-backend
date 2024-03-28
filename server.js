@@ -95,3 +95,7 @@ const port = process.env.PORT || 3030
 app.listen(port, () => {
     console.log('Server is up and listening to', port);
 })
+
+app.get('/**', (req, res) => {
+    res.sendFile(path.resolve('public/index.html'))
+})
