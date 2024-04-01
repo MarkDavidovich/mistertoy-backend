@@ -1,16 +1,13 @@
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 
-
-
 import { logger } from './services/logger.service.js'
 logger.info('server.js loaded...')
 
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url))
 const app = express()
 
 app.use(cookieParser())
